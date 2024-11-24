@@ -1,0 +1,228 @@
+.logo {
+    display: flex;
+    gap: 8px;
+    width: 150px;
+}
+
+.logoText {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.logo img {
+    width: 60%;
+    height: 60px;
+}
+
+.navbar a {
+    color: var(--primary-clr);
+    font-size: 1rem;
+    margin: 1rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    color: var(--primary-clr);
+}
+
+.navbar a::after {
+    content: "";
+    background-color: var(--primary-clr);
+    width: 0;
+    position: absolute;
+    height: 0.2rem;
+    left: 0;
+    margin-top: 0.5rem;
+    top: 100%;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-bars {
+    color: var(--textcolor);
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-left: 1.7rem;
+    display: none;
+    padding: 15px;
+}
+
+#menu-bars:hover {
+    color: var(--primary-clr);
+}
+
+.right-icons .btn {
+    padding: 1.2rem 2rem;
+    font-size: 1.7rem;
+    background: var(--primary-clr);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.right-icons .btn:hover {
+    background-color: var(--secondcolor);
+}
+
+.nav-btn {
+    padding: 10px 25px;
+    background-color: var(--primary-clr);
+    color: var(--background-clr);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-clr);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: transparent;
+    color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--primary-clr);
+    font-weight: bold;
+}
+
+.user-menu .dropdown {
+    display: none;
+    width: 10vw;
+    position: absolute;
+    background-color: var(--background-clr);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    right: 0;
+}
+
+.user-menu:hover .dropdown {
+    display: block;
+}
+
+.user-menu .dropdown li {
+    padding: 5px 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--primary-clr);
+}
+
+.navbar a:hover {
+    color: var(--primary-clr-hover);
+}
+
+.user-menu .dropdown li a {
+    color: var(--primary-clr);
+    text-decoration: none;
+}
+
+.user-menu .dropdown li a:hover {
+    color: var(--primary-clr-hover);
+}
+
+@media (max-width: 768px) {
+    .right-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-bars {
+        display: initial;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 2rem;
+        padding: 1rem;
+        border: 1px solid var(--textcolor);
+    }
+}
+
+/* Estilos para el dropdown */
+.user-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--primary-clr);
+    font-weight: bold;
+}
+
+.user-menu .dropdown {
+    display: none;
+    width: 200px;
+    position: absolute;
+    background-color: var(--background-clr);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+}
+
+.user-menu:hover .dropdown {
+    display: block;
+}
+
+.user-menu .dropdown li {
+    padding: 10px 15px;
+}
+
+.user-menu .dropdown li a {
+    color: var(--primary-clr);
+    text-decoration: none;
+    display: block;
+}
+
+.user-menu .dropdown li a:hover {
+    background-color: var(--primary-clr);
+    color: var(--background-clr);
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .user-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .user-menu .dropdown {
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 100%;
+    }
+
+    .user-menu .dropdown li {
+        padding: 10px 0;
+    }
+}

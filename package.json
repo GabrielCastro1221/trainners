@@ -1,0 +1,63 @@
+{
+  "name": "olympia_alternativa",
+  "version": "1.0.0",
+  "description": "Olympia Alternativa es una plataforma integral que conecta a usuarios con entrenadores personales certificados, ofrece una tienda en línea de productos deportivos de alta calidad y un blog con artículos sobre fitness y bienestar. Nuestra misión es transformar vidas a través del entrenamiento personalizado, la nutrición deportiva y el acceso a equipamiento y ropa deportiva. Únete a nuestra comunidad y mejora tu salud y bienestar con los mejores profesionales y productos del mercado.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js --mode dev",
+    "start": "node src/app.js --mode build"
+  },
+  "keywords": [
+    "contratar entrenadores",
+    "entrenadores personales",
+    "ecommerce deportivo",
+    "productos deportivos",
+    "blog deportivo",
+    "fitness",
+    "bienestar",
+    "salud",
+    "entrenamiento personal",
+    "nutrición deportiva",
+    "rutinas de ejercicio",
+    "equipamiento deportivo",
+    "ropa deportiva",
+    "accesorios deportivos",
+    "consejos de fitness",
+    "artículos de salud",
+    "vida saludable",
+    "entrenamiento funcional",
+    "entrenamiento en casa",
+    "entrenamiento en gimnasio",
+    "entrenadores certificados",
+    "entrenadores profesionales",
+    "comunidad fitness",
+    "Olympia Alternativa"
+  ],
+  "author": "Gabriel Castro Ramirez Full Stack Developer",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^1.21.0",
+    "commander": "^12.1.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.1",
+    "mongoose-paginate-v2": "^1.8.5",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^6.9.16",
+    "olimpia": "file:",
+    "olympia_alternativa": "file:",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "uuid": "^11.0.3",
+    "winston": "^3.17.0"
+  }
+}

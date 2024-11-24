@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/trainer.css">
+
+<header class="header">
+  {{> navbar}}
+</header>
+
+<section class="our-team mt-3" id="our_team">
+
+  <header class="section-header">
+    <h3 class="mb-1">Nuestro Equipo</h3>
+    <h2>Conozca a nuestros entrenadores experimentados y apasionados, dedicados a guiarte hacia tus metas.</h2>
+  </header>
+
+  <div class="team-contents">
+    {{#each entrenadores}}
+    <div class="trainer-card">
+      <div class="trainer-image">
+        <a href="/entrenadores/{{this._id}}"><img src="{{this.photo}}" alt="Foto de {{this.name}}" /></a>
+      </div>
+
+      <div class="mb-2 trainer-desc">
+        <h2 class="name-trainer">{{this.name}}</h2>
+        <h3 class="mt-1 mb-1 specialization">{{this.specialization}}</h3>
+        <p class="bio-card">{{this.bio}}</p>
+      </div>
+
+      <div class="mb-1">
+        <a class="btn-trainer a" href="/entrenadores/{{this._id}}">Mas informacion</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+</section>
+
+<footer>
+  {{> footer}}
+</footer>

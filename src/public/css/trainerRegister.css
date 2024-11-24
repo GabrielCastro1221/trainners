@@ -1,0 +1,78 @@
+.body-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-form strong {
+    margin-right: 10px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.btn-RT {
+    padding: 6px;
+    background-color: white;
+    color: var(--primary-clr);
+    border-radius: 5px;
+}
+
+.btn-RT:hover {
+    color: #27b6ef;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-clr);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container form input,
+.form-container form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: var(--background-clr);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-container form button {
+    padding: 10px;
+    background-color: var(--primary-clr);
+    color: var(--background-clr);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.form-container form button:hover {
+    background-color: var(--primary-clr-hover);
+}

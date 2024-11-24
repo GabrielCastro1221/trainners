@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="/css/profileTrainer.css">
+
+<header class="header">
+    {{> navbar}}
+</header>
+
+<div class="containe">
+    <header class="header-p">
+        <div class="brandLogo">
+            <figure>
+                <img src="/assets/img/favicon.png" alt="logo" width="50px" height="50px">
+            </figure>
+        </div>
+    </header>
+
+    <section class="userProfile car">
+        <div class="profile mt-3">
+            <figure>
+                <img src="{{#if data.photo}}{{data.photo}}{{else}}https://vineview.com/wp-content/uploads/2017/07/avatar-no-photo-300x300.png{{/if}}"
+                    alt="profile" width="250px" height="250px">
+            </figure>
+        </div>
+    </section>
+
+    <section class="userDetails car">
+        <div class="userName">
+            <h1 class="name">{{#if data.name}}{{data.name}}{{else}}No disponible{{/if}}</h1>
+            <p>{{#if data.specialization}}{{data.specialization}}{{else}}No disponible{{/if}}</p>
+        </div>
+    </section>
+
+    <section class="car mt-3">
+        <div class="ed contact_Inf">
+            <h1 class="headin">Información de usuario</h1>
+            <ul>
+                <li class="phon">
+                    <h1 class="labe">Teléfono:</h1>
+                    <span class="inf">{{#if data.phone}}{{data.phone}}{{else}}No disponible{{/if}}</span>
+                </li>
+                <li class="email">
+                    <h1 class="labe">E-mail:</h1>
+                    <span class="info">{{#if data.email}}{{data.email}}{{else}}No disponible{{/if}}</span>
+                </li>
+                <li class="site">
+                    <h1 class="labe">Biografía:</h1>
+                    <span class="info">{{#if data.bio}}{{data.bio}}{{else}}No disponible{{/if}}</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="work_skills car">
+        <div class="work">
+            <h1 class="headin mt-3 eds">EDUCACIÓN</h1>
+            {{#each data.educations}}
+            <div class="ed">
+                <h1>{{this.title}}</h1>
+                <span>{{this.institution}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <section class="work_skills car">
+        <div class="work">
+            <h1 class="headin mt-3 eds">EXPERIENCIA</h1>
+            {{#each data.experiences}}
+            <div class="ed">
+                <h1>{{this.title}}</h1>
+                <span>{{this.company}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <section class="work_skills car">
+        <div class="work">
+            <h1 class="headin mt-3 eds">SERVICIOS</h1>
+            {{#each data.services}}
+            <div class="ed">
+                <h1>{{this.title}}</h1>
+                <span>{{this.service}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</div>
+
+<footer>
+    {{> footer}}
+</footer>
+
+<script src="/js/trainerProfile.js"></script>

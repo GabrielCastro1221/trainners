@@ -1,0 +1,140 @@
+.subject-store {
+    padding: 7px;
+    background: var(--background-clr);
+    border: 2px solid var(--primary-clr);
+    color: var(--primary-clr);
+    border-radius: 8px;
+}
+
+.subject-store h3 {
+    font-size: 1rem;
+}
+
+.filter-menu {
+    list-style: none;
+    padding: 0;
+    margin-left: 67px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+}
+
+.filter-item {
+    position: relative;
+}
+
+.filter-link {
+    background-color: var(--background-clr);
+    color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.filter-link:hover {
+    background-color: var(--primary-clr);
+    color: var(--background-clr);
+}
+
+.dropdown-menu {
+    display: none;
+    width: 180%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ddd;
+    background-color: rgba(215, 228, 255, 0.94);
+    color: var(--background-clr);
+    border-radius: 5px;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-divider {
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.pagination-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+    background-color: #0056b3;
+}
+
+.pagination-info {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.pagination-button i {
+    margin: 0 5px;
+}
+
+
+.button-product-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+.button-product-card button {
+    padding: 4px;
+    background-color: #007bff;
+    color: var(--background-clr);
+    margin-top: 14px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.button-product-card button:hover {
+    background-color: var(--primary-clr-hover);
+    cursor: pointer;
+}
+

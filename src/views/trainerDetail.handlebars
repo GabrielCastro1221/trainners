@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/css/productDetail.css">
+
+<header class="header">
+  {{> navbar}}
+</header>
+
+<div class="mt-13">
+  <div class="product-detail-container">
+    <div class="detailT-content">
+      <div class="image-detail flex mb-2">
+        <img src="{{trainer.photo}}" alt="Imagen del entrenador" />
+        <div>
+
+          <div class="category-trainer">
+            <h5>{{trainer.specialization}}</h5>
+          </div>
+
+          <h1 class="name-trainer">{{trainer.name}}</h1>
+          <div>
+            <a href="https://wa.me/{{trainer.phone}}" target="_blank" class="whatsapp-btn">
+              <i class="fa-brands fa-whatsapp"></i>
+              Para adquirir mis servicios, contáctame
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="description">
+        <p>{{trainer.bio}}</p>
+      </div>
+
+      <div class="services mb-2">
+        <h2 class="name-trainer">Servicios</h2>
+        <div class="cards-container" id="service-card">
+          {{#each trainer.services}}
+          <div class="card">
+            <h3>{{this.title}}</h3>
+            <p>{{this.service}}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="education mb-2">
+        <h2 class="name-trainer">Educación</h2>
+        <div class="cards-container" id="education-card">
+          {{#each trainer.educations}}
+          <div class="card">
+            <h3>{{this.title}}</h3>
+            <p>{{this.institution}}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="mt-3 experience">
+        <h2 class="name-trainer">Experiencia Profesional</h2>
+        <div class="cards-container" id="card-exp">
+          {{#each trainer.experiences}}
+          <div class="card">
+            <h3>{{this.title}}</h3>
+            <p>{{this.company}}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer>
+  {{> footer}}
+</footer>

@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="/css/profileTrainer.css">
+
+<header class="header">
+    {{> navbar}}
+</header>
+
+<div class="container mt-10 mb-3">
+    <header class="header-p">
+        <div class="brandLogo">
+            <figure><img src="/assets/img/favicon.png" alt="logo" width="50px" height="50px"></figure>
+        </div>
+    </header>
+
+    <section class="userProfile car">
+        <div class="profile mt-3">
+            <figure>
+                <img src="{{#if user.photo}}{{user.photo}}{{else}}https://vineview.com/wp-content/uploads/2017/07/avatar-no-photo-300x300.png{{/if}}"
+                    alt="profile" width="250px" height="250px">
+            </figure>
+        </div>
+    </section>
+
+    <section class="userDetails car">
+        <div class="userName">
+            <h1 class="name">{{user.name}}</h1>
+            <div class="map">
+                <i class="ri-map-pin-fill ri"></i>
+                <span>{{user.role}}</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="car mt-3">
+        <div class="ed contact_Inf">
+            <h1 class="heading text-center mb-2">Información de contacto</h1>
+            <ul>
+                <li class="phone">
+                    <h1 class="label">Teléfono:</h1>
+                    <span class="info">{{#if user.phone}}{{user.phone}}{{else}}No disponible{{/if}}</span>
+                </li>
+                <li class="email">
+                    <h1 class="label">E-mail:</h1>
+                    <span class="info">{{#if user.email}}{{user.email}}{{else}}No disponible{{/if}}</span>
+                </li>
+                <li class="gender">
+                    <h1 class="label">Género:</h1>
+                    <span class="info">{{#if user.gender}}{{user.gender}}{{else}}No disponible{{/if}}</span>
+                </li>
+            </ul>
+
+            <div class="btn-userP">
+                <button class="edt" id="editProfileBtn" data-user-id="{{user._id}}">Editar Perfil</button>
+                <button class="btr" id="deleteAccountBtn" data-user-id="{{user._id}}">Eliminar cuenta</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Modal -->
+<div id="editProfileModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Editar Perfil</h2>
+        <form id="editProfileForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" value="{{user.name}}" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" value="{{user.email}}" required>
+            <label for="phone">Teléfono:</label>
+            <input type="text" id="phone" name="phone" value="{{user.phone}}">
+            <label for="gender">Género:</label>
+            <select id="gender" name="gender" required>
+                <option value="masculino" {{#if (eq user.gender "masculino" )}}selected{{/if}}>Masculino</option>
+                <option value="femenino" {{#if (eq user.gender "femenino" )}}selected{{/if}}>Femenino</option>
+                <option value="otro" {{#if (eq user.gender "otro" )}}selected{{/if}}>Otro</option>
+            </select>
+            <button type="submit" data-user-id="{{user._id}}">Guardar Cambios</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    {{> footer}}
+</footer>
+
+<script src="/js/userProfile.js"></script>

@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<link rel="stylesheet" href="/css/blog.css">
+
+<header class="header">
+    {{> navbar}}
+</header>
+
+<section class="home-blog mt-9" id="home-blog">
+    <div class="home-blog-text container-blog-home">
+        <h2 class="home-blog-title">Nacci trainer blog</h2>
+        <span class="home-blog-subtitle">Tu fuente de gran contenido</span>
+    </div>
+</section>
+
+<div class="post-filter container-home-blog">
+    <span class="filter-item active-filter" data-filter="all">Todos</span>
+    <span class="filter-item" data-filter="deporte">Deporte</span>
+    <span class="filter-item" data-filter="salud">Salud</span>
+    <span class="filter-item" data-filter="diversion">Diversion</span>
+</div>
+
+<section class="blog" id="blog">
+    <div class="blog-contents" id="post-cards"></div>
+
+    <div id="comment-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2 class="title-comments">Comentarios</h2>
+            <textarea id="new-comment" placeholder="Escribe tu comentario..."></textarea>
+            <button id="submit-comment" class="btn-post">Comentar</button>
+            <ul id="comment-list" class="list-comments"></ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    {{> footer}}
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="/js/blog.js"></script>

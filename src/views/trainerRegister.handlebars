@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="/css/userRegister.css">
+
+<header class="header">
+    {{> navbar}}
+</header>
+
+<div class="body-register mt-13">
+    <div class="form-container">
+        <div class="mb-2 header-form">
+            <h2 class="mt-3">Registrarse como entrenador</h2>
+            <div>
+                <img src="/assets/img/favicon.png" width="100px" alt="">
+            </div>
+            <h5>Nacci trainner</h5>
+        </div>
+
+        <form id="trainerRegisterForm" enctype="multipart/form-data">
+            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu Email" required>
+            <input type="password" id="password" name="password" placeholder="Ingresa una contraseña" required>
+            <input type="text" id="phone" name="phone" placeholder="Ingresa un telefono" required>
+
+            <label for="photo">Subir foto:</label>
+            <div class="file-input-container">
+                <img id="imagePreview" class="image-preview"
+                    src="https://vineview.com/wp-content/uploads/2017/07/avatar-no-photo-300x300.png"
+                    alt="Vista previa de la imagen">
+                <label for="photo" class="file-label">Foto</label>
+                <input type="file" id="photo" name="photo" class="file-input" accept="image/*"
+                    onchange="previewImage(event)">
+            </div>
+
+            <div class="dynamic-fields" id="educationsFields">
+                <label>Educación:</label>
+                <div>
+                    <input type="text" name="educations[0][title]" placeholder="Título" required>
+                    <input type="text" name="educations[0][institution]" placeholder="Institución" required>
+                </div>
+                <button type="button" onclick="addEducationField()">Agregar Educación</button>
+            </div>
+
+            <div class="dynamic-fields" id="experiencesFields">
+                <label>Experiencia:</label>
+                <div class="mt-3">
+                    <input type="text" name="experiences[0][title]" placeholder="Título" required>
+                    <input type="text" name="experiences[0][company]" placeholder="Compañía" required>
+                </div>
+                <button type="button" onclick="addExperienceField()">Agregar Experiencia</button>
+            </div>
+
+            <div class="dynamic-fields" id="servicesFields">
+                <label>Servicios:</label>
+                <div class="mt-3">
+                    <input type="text" name="services[0][title]" placeholder="Título" required>
+                    <input type="text" name="services[0][service]" placeholder="Servicio" required>
+                </div>
+                <button type="button" onclick="addServiceField()">Agregar Servicio</button>
+            </div>
+
+            <label for="bio" class="mt-3">Biografía:</label>
+            <textarea id="bio" name="bio" maxlength="500" required></textarea>
+            <label for="about">Acerca de:</label>
+            <textarea id="about" name="about" required></textarea>
+            <label for="specialization">Especialización:</label>
+            <input type="text" id="specialization" name="specialization" required>
+            <input type="hidden" id="role" name="role" value="entrenador">
+            <a href="/user-register" class="btn-RT a">Registrate como usuario</a>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    {{> footer}}
+</footer>
+
+<script src="/js/trainerRegister.js"></script>
+<script src="/js/userRegister.js"></script>

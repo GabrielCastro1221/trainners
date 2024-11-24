@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/userRegister.css">
+
+<header class="header">
+    {{> navbar}}
+</header>
+<div class="mt-13">
+
+    <div class="form-container">
+        <div class="header-form">
+            <h2>Registrarse como usuario</h2>
+            <div>
+                <img src="/assets/img/favicon.png" width="100px" alt="">
+            </div>
+            <h5>Nacci trainner</h5>
+        </div>
+
+        <form id="userRegisterForm" enctype="multipart/form-data">
+            <input type="text" id="name" name="name" placeholder="Ingrese su nombre completo" required>
+            <input type="email" id="email" name="email" placeholder="Ingrese su Email" required>
+            <input type="password" id="password" name="password" placeholder="Ingrese la contraseña" required>
+            <input type="text" id="phone" name="phone" placeholder="Ingrese un telefono" required>
+
+            <select id="gender" name="gender" required>
+                <option value="Seleccionar">Seleccionar un genero</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+            
+            <div class="file-input-container">
+                <img id="imagePreview" class="image-preview"
+                    src="https://vineview.com/wp-content/uploads/2017/07/avatar-no-photo-300x300.png"
+                    alt="Vista previa de la imagen">
+                <label for="photo" class="file-label">Foto</label>
+                <input type="file" id="photo" name="photo" class="file-input" accept="image/*"
+                    onchange="previewImage(event)">
+            </div>
+            <a class="btn-RT" href="/registro/entrenador">Registrate como entrenador</a>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</div>
+<footer>
+    {{> footer}}
+</footer>
+
+<script src="/js/userRegister.js"></script>

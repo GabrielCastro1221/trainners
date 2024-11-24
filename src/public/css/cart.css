@@ -1,0 +1,55 @@
+.total-price {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.btn-group .btn {
+    margin-left: 10px;
+}
+
+.cart-empty {
+    padding: 6px;
+    background: var(--background-clr);
+    color: rgb(167, 0, 0);
+    border: 1px solid rgb(167, 0, 0);
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.cart-empty:hover {
+    background: rgb(167, 0, 0);
+    color: var(--background-clr);
+}
+
+.purchase {
+    padding: 6px;
+    background: var(--background-clr);
+    color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+    border-radius: 5px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+
+.purchase:hover {
+    background: var(--primary-clr);
+    color: var(--background-clr);
+}
+
+.follow-buy {
+    padding: 6px;
+    background: var(--background-clr);
+    color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.follow-buy:hover {
+    background: var(--primary-clr);
+    color: var(--background-clr);
+}

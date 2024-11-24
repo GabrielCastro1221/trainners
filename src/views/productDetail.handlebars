@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/productDetail.css">
+
+<header class="header">
+  {{> navbar}}
+</header>
+
+<div class="mt-13">
+  <div class="product-detail-container">
+    <div class="detail">
+      <div class="image-detail">
+        <img src="{{product.img}}" alt="{{product.title}}" />
+      </div>
+
+      <div class="detail-content">
+        <div class="category-store">
+          <div class="subject-store">
+            Categoria: {{product.category}}
+          </div>
+        </div>
+        <h1 class="name-product">{{product.title}}</h1>
+        <div class="description">{{product.description}}</div>
+        <div class="description">Unidades disponibles: {{product.stock}} <small>Unds</small></div>
+        <div class="price">Precio: ${{product.price}}</div>
+        <div class="btns-detail mt-3">
+          <form action="/api/v1/cart/{{cartId}}/product/{{product._id}}" method="POST">
+            <button type="submit" title="Agregar al carrito">Agregar al carrito</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  {{> footer}}
+</footer>

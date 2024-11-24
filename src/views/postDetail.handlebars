@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/post.css">
+
+<header class="header">
+  {{> navbar}}
+</header>
+
+<section class="post-header mt-9">
+  <div class="header-post-content post-container">
+    <a href="/blog" class="back-blog mt-3 a">Regresar al blog</a>
+    <h1 class="header-post-title">{{title}}</h1>
+    <img src="{{imageUrl}}" class="header-post-img" alt="Post image" />
+  </div>
+</section>
+
+<section class="post-content post-container">
+  <div>
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+  </div>
+  <div class="mt-3">
+    <h3>{{title_two}}</h3>
+    <p>{{description_two}}</p>
+  </div>
+</section>
+
+<footer>
+  {{> footer}}
+</footer>

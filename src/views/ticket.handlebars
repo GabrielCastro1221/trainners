@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/ticket.css">
+
+<header class="header">
+  {{> navbar}}
+</header>
+
+<div class="ticket-wrapper">
+  <div class="ticket-container">
+    {{#if status}}
+    <p class="ticket-message-success">Gracias por preferir nuestra tienda</p>
+    <div class="ticket-image-container">
+      <img src="/assets/img/favicon.png" alt="Logo" class="ticket-image">
+    </div>
+    <p class="ticket-message">{{message}}</p>
+    <ul class="ticket-details">
+      <li><strong>Código:</strong> {{ticket.code}}</li>
+      <li><strong>Email del comprador:</strong> {{ticket.purchaser}}</li>
+      <li><strong>Precio:</strong> {{ticket.amount}}</li>
+    </ul>
+    {{else}}
+    <p class="ticket-message-error">{{message}}</p>
+    {{/if}}
+  </div>
+
+  <div class="payment-method">
+    <div class="payment-method-content">
+      <div class="payment-logo">
+        <img src="https://th.bing.com/th/id/OIP.ERX9_NgWqpNJ39pxL_FmEwHaCZ?rs=1&pid=ImgDetMain" alt="logo nequi"
+          class="payment-logo-image">
+      </div>
+      <p class="payment-instructions">
+        Para hacer el pago por la billetera virtual de Bancolombia (NEQUI), acércate a un corresponsal y dile al cajero que vas a hacer una consignación con el valor de <span class="payment-amount">${{ticket.amount}}</span> al número de cuenta <span class="payment-account">3146381395</span> a nombre de
+        <span class="payment-name">Carlos Villagran</span>. También puedes realizar la consignación por medio de la App. Una vez realices la consignación, envíanos el comprobante de pago. Una vez el pago sea aprobado, te solicitaremos los datos de envío.
+      </p>
+      <a href="https://api.whatsapp.com/send/?phone=3146381395" target="_blank" class="payment-button">
+        Enviar comprobante de pago
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  {{> footer}}
+</footer>

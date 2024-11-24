@@ -1,0 +1,72 @@
+<div class="container-fluid mt-5">
+    <h2 class="title-admin">Administración de Publicaciones</h2>
+    <div class="mt-4 mb-4">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearPublicacionModal">
+            Crear Publicación
+        </button>
+    </div>
+
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th scope="col">Categoría</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Título 1</th>
+            <th scope="col">Descripción 1</th>
+            <th scope="col">Título 2</th>
+            <th scope="col">Descripción 2</th>
+            <th scope="col">Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="postsTableBody"> </tbody>
+    </table>
+
+</div>
+
+<div class="modal fade" id="crearPublicacionModal" tabindex="-1" aria-labelledby="crearPublicacionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearPublicacionModalLabel">Nueva Publicación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="postForm" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Categoría</label>
+                        <input type="text" class="form-control" id="category" name="category"
+                            placeholder="Ingresa la categoría" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="title_one" class="form-label">Título 1</label>
+                        <input type="text" class="form-control" id="title_one" name="title_one"
+                            placeholder="Ingresa el título principal" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="desc_one" class="form-label">Descripción 1</label>
+                        <textarea class="form-control" id="desc_one" name="desc_one" rows="3"
+                            placeholder="Ingresa la descripción principal" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="title_two" class="form-label">Título 2 (opcional)</label>
+                        <input type="text" class="form-control" id="title_two" name="title_two"
+                            placeholder="Ingresa el segundo título (opcional)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="desc_two" class="form-label">Descripción 2 (opcional)</label>
+                        <textarea class="form-control" id="desc_two" name="desc_two" rows="3"
+                            placeholder="Ingresa la segunda descripción (opcional)"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="img" class="form-label">Subir Imagen</label>
+                        <input type="file" class="form-control" id="img" name="img" accept="image/*">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="savePostBtn">Guardar Publicación</button>
+            </div>
+        </div>
+    </div>
+</div>

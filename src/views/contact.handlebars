@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<link rel="stylesheet" href="/css/contact.css">
+
+<header class="header">
+    {{> navbar}}
+</header>
+
+<div class="contact-wrapper mt-8">
+    <div class="container-contact">
+        <div class="left">
+            <h3 class="heading">Contactanos</h3>
+            <p class="text">Estamos aqui para ti! como podemos ayudarte?</p>
+
+            <form class="contact-form" id="form">
+                <div class="inputBox">
+                    <input type="text" name="from_name" id="from_name" class="name" placeholder="Ingrese su nombre">
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="from_email" id="from_email" class="email" placeholder="Ingrese su email">
+                </div>
+                <div class="inputBox">
+                    <textarea name="message" id="message" class="message" placeholder="Ingrese su mensaje"></textarea>
+                </div>
+                <input type="submit" class="contact-btn" id="button" value="Enviar Mensaje">
+            </form>
+
+        </div>
+        <div class="right">
+            <div class="ilustration">
+                <img src="/assets/img/favicon.png" alt="">
+            </div>
+            <h4 class="text-center olimpia">Nacci Trainner</h4>
+            <div class="contact-info">
+                <div class="infoBox">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                        <a class="text a" href="tel:+573152525252">+57 317 684 4762</a>
+                    </div>
+
+                    <div class="icon">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a class="text a" href="mailto:example@example.com">nacciTrainner@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    {{> footer}}
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    emailjs.init('lsXRuv0DM3kFyX-N4')
+</script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="/js/contact.js"></script>

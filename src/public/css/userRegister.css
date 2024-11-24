@@ -1,0 +1,108 @@
+.form-container {
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.header-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-form h2 {
+  margin: 0;
+  color: #333;
+}
+
+.header-form img {
+  margin-top: 10px;
+}
+
+.header-form h5 {
+  margin: 10px 0;
+  color: #777;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select,
+button {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: #008ec6;
+}
+
+button {
+  background-color: #00a5e6;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #008ec6;
+}
+
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00a5e6;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.file-label:hover {
+  background-color: #008ec6;
+}
+
+.image-preview {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.btn-RT {
+  text-align: center;
+  color: #00a5e6;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.btn-RT:hover {
+  text-decoration: underline;
+}

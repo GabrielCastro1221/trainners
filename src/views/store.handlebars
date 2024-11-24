@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="/css/trainer.css">
+<link rel="stylesheet" href="/css/store.css">
+
+<header class="header">
+    {{> navbar}}
+</header>
+
+<section class="our-team mt-5" id="our_team">
+    <div class="container products-container">
+        <ul class="filter-menu">
+            <li class="filter-item dropdown">
+                <a class="filter-link dropdown-toggle" id="filter-button" href="#" role="button" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-filter" viewBox="0 0 16 16">
+                        <path
+                            d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    Filtros
+                </a>
+                <ul class="dropdown-menu" id="filter-menu">
+                    <li><a class="dropdown-item" href="/tienda?sort=desc">Mas caro</a></li>
+                    <li><a class="dropdown-item" href="/tienda?sort=asc">Mas barato</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/tienda">Todos los Productos</a></li>
+                    <li><a class="dropdown-item" href="/tienda?query=Aerosoles">Aerosoles</a></li>
+                    <li><a class="dropdown-item" href="/tienda?query=Ropa">Ropa</a></li>
+                    <li><a class="dropdown-item" href="/tienda?query=Accesorios">Accesorios</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/tienda?limit=1">1 producto por pagina</a></li>
+                    <li><a class="dropdown-item" href="/tienda?limit=2">2 producto por pagina</a></li>
+                    <li><a class="dropdown-item" href="/tienda?limit=3">3 producto por pagina</a></li>
+                    <li><a class="dropdown-item" href="/tienda?limit=4">4 producto por pagina</a></li>
+                    <li><a class="dropdown-item" href="/tienda?limit=5">5 producto por pagina</a></li>
+                    <li><a class="dropdown-item" href="/tienda?limit=6">6 producto por pagina</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="team-contents">
+        {{#each productos}}
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <a href="/producto/{{this.id}}" title="Detalle del producto">
+                    <img src="{{this.img}}" alt="{{this.title}}" />
+                </a>
+            </div>
+            <div class="trainer-desc">
+                <h2 class="text-center mt-1">{{this.title}}</h2>
+
+                <div class="category-store">
+                    <div class="subject-store">
+                        Categoria
+                    </div>
+                    <h3>{{this.category}}</h3>
+                </div>
+                <h4 class="mt-3 mb-1">Precio: ${{this.price}}</h4>
+                <h4>Unidades disponibles: {{this.stock}} <small>Unds</small></h4>
+                <div class="btns-tienda-container">
+                    <form action="/api/v1/cart/{{../cartId}}/product/{{id}}" method="POST">
+                        <button class="btns-tienda" type="submit" title="Agregar al carrito">Comprar</button>
+                    </form>
+                    <a class="btnnn" href="/producto/{{this.id}}">Detalle</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="pagination">
+        {{#if hasPrevPage}}
+        <a href="/tienda?page={{prevPage}}&limit={{limit}}&sort={{sort}}&query={{query}}"
+            class="pagination-button prev">
+            <i class="fas fa-chevron-left"></i> Anterior
+        </a>
+        {{/if}}
+        <span class="pagination-info">Página {{currentPage}} de {{totalPages}}</span>
+        {{#if hasNextPage}}
+        <a href="/tienda?page={{nextPage}}&limit={{limit}}&sort={{sort}}&query={{query}}"
+            class="pagination-button next">
+            Siguiente <i class="fas fa-chevron-right"></i>
+        </a>
+        {{/if}}
+    </div>
+</section>
+
+<footer>
+    {{> footer}}
+</footer>
+
+<script src="/js/store.js"></script>
