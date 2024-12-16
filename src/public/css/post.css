@@ -54,3 +54,25 @@
 .filter-options button:hover {
     background-color: #0056b3;
 }
+
+.post-content {
+    padding-top: 120px;
+}
+
+@media (max-width: 697px) {
+    .post-content {
+        padding-top: 250px;
+    }
+}
+
+@media (max-width: 442px) {
+    .post-content {
+        padding-top: 320px;
+    }
+}
+
+@media (max-width: 420px) {
+    .post-content {
+        padding-top: 380px;
+    }
+}
